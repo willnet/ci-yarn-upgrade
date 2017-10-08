@@ -19,7 +19,10 @@ export default class {
             .then(out => {
                 this.LOG("END   yarnpkg outdated");
                 return out.stdout.trim();
-            });
+            }).catch(out => {
+                  this.LOG("END   yarnpkg outdated");
+                  return out.stdout.trim();
+            );
     }
 
     upgrade() {
